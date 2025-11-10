@@ -1962,6 +1962,9 @@ parameters:
   - name: --gateway-prefix-size
     type: int
     short-summary: The size of Public IPPrefix attached to the Gateway-mode node pool. The node pool must be in Gateway mode.
+  - name: --localdns-config
+    type: string
+    short-summary: Set the localDNS Profile for a nodepool with a JSON config file.
   - name: --workload-runtime
     type: string
     short-summary: Set the workload runtime.
@@ -2120,6 +2123,9 @@ parameters:
   - name: --if-none-match
     type: string
     short-summary: Set to '*' to allow a new node pool to be created, but to prevent updating an existing node pool. Other values will be ignored.
+  - name: --localdns-config
+    type: string
+    short-summary: Set the localDNS Profile for a nodepool with a JSON config file.
 examples:
   - name: Reconcile the nodepool back to its current state.
     text: az aks nodepool update -g MyResourceGroup -n nodepool1 --cluster-name MyManagedCluster

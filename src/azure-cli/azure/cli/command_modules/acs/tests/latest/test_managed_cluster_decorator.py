@@ -86,6 +86,7 @@ from knack.prompting import NoTTYException
 import datetime
 from dateutil.parser import parse
 
+
 class AKSManagedClusterModelsTestCase(unittest.TestCase):
     def setUp(self):
         self.cli_ctx = MockCLI()
@@ -8922,6 +8923,7 @@ class AKSManagedClusterCreateDecoratorTestCase(unittest.TestCase):
             ),
         )
         self.assertEqual(dec_mc_2, ground_truth_mc_2)
+
 
 class AKSManagedClusterUpdateDecoratorTestCase(unittest.TestCase):
     def setUp(self):

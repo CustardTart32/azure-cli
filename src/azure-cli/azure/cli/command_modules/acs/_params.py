@@ -1054,6 +1054,7 @@ def load_arguments(self, _):
         c.argument("if_none_match")
         c.argument('gpu_driver', arg_type=get_enum_type(gpu_driver_install_modes))
         c.argument("gateway_prefix_size", type=int, validator=validate_gateway_prefix_size)
+        c.argument('localdns_config', help='Path to a JSON file to configure the local DNS profile for a new nodepool.')
         c.argument('workload_runtime', arg_type=get_enum_type(workload_runtime_types), help="The workload runtime to use on the nodepool.")
 
     with self.argument_context('aks nodepool update', resource_type=ResourceType.MGMT_CONTAINERSERVICE, operation_group='agent_pools') as c:
@@ -1086,6 +1087,7 @@ def load_arguments(self, _):
         c.argument('disable_secure_boot', action='store_true')
         c.argument("if_match")
         c.argument("if_none_match")
+        c.argument('localdns_config', help='Path to a JSON file to configure the local DNS profile for a new nodepool.')
 
     with self.argument_context('aks nodepool upgrade') as c:
         c.argument('max_surge', validator=validate_max_surge)
